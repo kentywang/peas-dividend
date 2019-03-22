@@ -1,1 +1,1 @@
-# peas-dividend
+# Peas Dividend
