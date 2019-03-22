@@ -1,0 +1,123 @@
+<html>
+  <head>
+    <title>Peas Dividend</title>
+  </head>
+  <body>
+
+    <header>
+      <img class="logo" src=""/>
+      <h1>
+        Mendelian Inheritance
+      </h1>
+    </header>
+
+    <main>
+      <section class="punnett-side">        
+        <span>
+          Select two pea plant genotypes to cross.
+        </span>
+
+        <div class="punnett-square-container">
+          <form>
+            <fieldset id="pea-1-genotype">
+              <input type="radio" name="pea-1-genotype" id="pea-1-genotype-YY" value="YY">
+              <label for="pea-1-genotype-YY">
+                <img src="/assets/yellow_pea.svg">
+                <span>YY</span>
+              </label>
+              
+              <input type="radio" name="pea-1-genotype" id="pea-1-genotype-Yy" value="Yy">
+              <label for="pea-1-genotype-Yy">
+                <img src="/assets/yellow_pea.svg">
+                <span>Yy</span>
+              </label>
+
+              <input type="radio" name="pea-1-genotype" id="pea-1-genotype-yy" value="yy">
+              <label for="pea-1-genotype-yy">
+                <img src="/assets/green_pea.svg">
+                <span>yy</span>
+              </label>
+            </fieldset>
+
+            <fieldset id="pea-2-genotype">
+              <input type="radio" name="pea-2-genotype" id="pea-2-genotype-YY" value="YY">
+              <label for="pea-2-genotype-YY">
+                <img src="/assets/yellow_pea.svg">
+                <span>YY</span>
+              </label>
+              
+              <input type="radio" name="pea-2-genotype" id="pea-2-genotype-Yy" value="Yy">
+              <label for="pea-2-genotype-Yy">
+                <img src="/assets/yellow_pea.svg">
+                <span>Yy</span>
+              </label>
+
+              <input type="radio" name="pea-2-genotype" id="pea-2-genotype-yy" value="yy">
+              <label for="pea-2-genotype-yy">
+                <img src="/assets/green_pea.svg">
+                <span>yy</span>
+              </label>
+            </fieldset>
+
+          </form>
+
+          <table class="punnett-square">
+            <caption>Punnett square diagram</caption>
+            <tr>
+              <td></td>
+              <th scope="col">Y</th>
+              <th scope="col">y</th>
+            </tr>
+            <tr>
+              <th scope="row">Y</th>
+              <td>
+                <img src="/assets/yellow_pea.svg">
+                <span>YY</span>
+              </td>
+              <td>
+                <img src="/assets/yellow_pea.svg">
+                <span>Yy</span>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">y</th>
+              <td>
+                <img src="/assets/yellow_pea.svg">
+                <span>Yy</span>
+              </td>
+              <td>
+                <img src="/assets/green_pea.svg">
+                <span>yy</span>
+              </td>
+            </tr>
+          </table>
+
+        </div>
+      </section>
+      <section class="chart-side">
+
+
+
+
+      </section>
+    </main>
+
+    <nav></nav>
+
+
+    <div id="app">
+      {{ message }}
+    </div>
+    
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script type="text/javascript" defer>
+      const app = new Vue({
+        el: '#app',
+        data: {
+          message: 'Hello Vue!'
+        }
+      })
+    </script>
+  </body>
+<html>
