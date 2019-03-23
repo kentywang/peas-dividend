@@ -24,6 +24,10 @@ img {
 }
 
 /* Styles begin here. */
+header {
+  position: absolute;
+}
+
 .punnett-section {
 	background-color: #C6C6C6;
 }
