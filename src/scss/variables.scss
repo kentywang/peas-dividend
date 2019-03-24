@@ -14,7 +14,7 @@ $z-index-one: 100;
 
 // Breakpoints
 @mixin larger {
-  @media (min-width: 1200px) { @content; }
+  @media (min-width: 1280px) { @content; }
 }
 
 // Need font mixins

@@ -4,7 +4,8 @@
   align-items: center;
 
   @include larger {
-    width: 62%;
+    // width: 62%;
+    flex: 1 0 60%;
   }
 }
 
