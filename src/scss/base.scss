@@ -15,6 +15,14 @@ main {
   @include larger {
     flex-wrap: no-wrap;
     height: 100%;
-    min-height: 950px;
+    min-height: 1080px;
   }
+}
+
+section {
+    padding: 77px 0;
+
+    @include larger {
+      padding: inherit;
+    }
 }

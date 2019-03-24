@@ -2,12 +2,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 77px;
-  padding-bottom: 77px;
 
   @include larger {
     width: 62%;
-    padding: inherit;
   }
 }
 

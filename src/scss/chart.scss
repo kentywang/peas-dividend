@@ -1,9 +1,18 @@
 .chart-section {
   background-color: $gray-light;
-  width: 38%;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+  width: 100%;
+
+  @include larger {
+    width: 38%;
+  }
+
+  output {
+    text-align: center;
+  }
 }
 
 .output-caption {
@@ -13,4 +22,23 @@
   text-transform: uppercase;
   font-weight: 700;
   letter-spacing: 0.05em;
+
+  &.geno {
+    margin-top: 126px;
+  }
+}
+
+.chart {
+  margin-top: 12px;
+  width: 500px;
+  height: 350px;
+}
+
+.ratio {
+  margin-top: 18px; 
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  color: $charcoal;
+  font-weight: 700;
+  font-size: 50px;
 }

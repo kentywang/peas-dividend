@@ -14,3 +14,30 @@ $z-index-one: 100;
 @mixin larger {
   @media (min-width: 1200px) { @content; }
 }
+
+// Need font mixins
+// @mixin roboto {
+//   font-family: 'Roboto', sans-serif;
+//   color: white;
+//   font-size: 35px;
+// }
+
+// @mixin roboto-light {
+//   @include mixin roboto;
+
+//   font-weight: 100;
+// }
+
+
+// @mixin roboto-medium {
+//   @include mixin roboto;
+
+//   font-weight: 400;
+// }
+
+
+// @mixin roboto-bold {
+//   @include mixin roboto;
+
+//   font-weight: 700;
+// }

@@ -60,7 +60,16 @@ main {
   main {
     flex-wrap: no-wrap;
     height: 100%;
-    min-height: 950px;
+    min-height: 1080px;
+  }
+}
+
+section {
+  padding: 77px 0;
+}
+@media (min-width: 1200px) {
+  section {
+    padding: inherit;
   }
 }
 
@@ -148,13 +157,10 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 77px;
-  padding-bottom: 77px;
 }
 @media (min-width: 1200px) {
   .punnett-section {
     width: 62%;
-    padding: inherit;
   }
 }
 
@@ -309,10 +315,19 @@ tr:not(:nth-of-type(1)) th {
 
 .chart-section {
   background-color: #D3D3D3;
-  width: 38%;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+  width: 100%;
+}
+@media (min-width: 1200px) {
+  .chart-section {
+    width: 38%;
+  }
+}
+.chart-section output {
+  text-align: center;
 }
 
 .output-caption {
@@ -322,6 +337,24 @@ tr:not(:nth-of-type(1)) th {
   text-transform: uppercase;
   font-weight: 700;
   letter-spacing: 0.05em;
+}
+.output-caption.geno {
+  margin-top: 126px;
+}
+
+.chart {
+  margin-top: 12px;
+  width: 500px;
+  height: 350px;
+}
+
+.ratio {
+  margin-top: 18px;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  color: #585858;
+  font-weight: 700;
+  font-size: 50px;
 }
 
 /*# sourceMappingURL=style.css.map */
