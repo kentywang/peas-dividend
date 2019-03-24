@@ -1,0 +1,20 @@
+body {
+  background-color: $gray;
+  min-width: 700px;
+
+  @include larger {
+    height: 100vh;
+  }
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  @include larger {
+    flex-wrap: no-wrap;
+    height: 100%;
+    min-height: 950px;
+  }
+}

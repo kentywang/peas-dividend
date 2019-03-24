@@ -1,0 +1,78 @@
+header {
+  align-items: center;
+  color: white;
+  display: flex;
+  font-family: 'Roboto', sans-serif;
+  justify-content: space-between;
+  padding: 28px 36px 0 57px;
+
+  @include larger {
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+}
+
+.heading {
+  display: flex;
+  align-items: center;
+}
+
+.author {
+  display: inline-block;
+  font-size: 47px;
+  padding-right: 18px;
+  border-right: 2px solid white;
+  letter-spacing: 0.05em;
+  font-weight: 500;
+}
+
+h1 {
+  display: inline-block;
+  font-size: 33px;
+  font-weight: 300;
+  margin: 0 18px;
+  letter-spacing: 0.05em;
+}
+
+.nav {
+  margin-left: auto;
+}
+
+.menu {
+  display: flex;
+}
+
+.menu li {
+  display: inline-block;
+}
+
+.info,
+.close {
+  display: block;
+  border: 2px solid white;
+  border-radius: 50%;
+  height: 56px;
+  width: 56px;
+  position: relative;
+  margin-left: 18px;
+}
+
+.info::before,
+.close::before {
+  font-family: 'Roboto', sans-serif;
+  font-size: 30px;
+  text-align: center;
+  top: 50%;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.info::before {
+  content: 'i';
+}
+
+.close::before {
+  content: '✕';
+}

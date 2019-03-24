@@ -1,0 +1,16 @@
+// Colors
+$charcoal: #585858;
+$gray: #C6C6C6;
+$gray-light: #D3D3D3;
+$red: #E07567;
+$red-faded: rgb(224, 117, 103, 0.5);
+$white-faded: rgb(255, 255, 255, 0.75);
+$white-faded-more: rgb(255, 255, 255, 0.5);
+
+// z-index
+$z-index-one: 100;
+
+// Breakpoints
+@mixin larger {
+  @media (min-width: 1200px) { @content; }
+}
