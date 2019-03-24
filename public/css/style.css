@@ -343,11 +343,47 @@ tr:not(:nth-of-type(1)) th {
 }
 
 .chart {
-  margin-top: 12px;
+  margin: 37px;
   width: 500px;
   height: 350px;
 }
-
+.chart .background {
+  position: absolute;
+}
+.chart .background .value {
+  position: absolute;
+  font-size: 39px;
+  font-family: "Roboto", sans-serif;
+  color: #585858;
+  font-weight: 500;
+  left: -26px;
+  top: -26px;
+}
+.chart .background .tick {
+  position: relative;
+  border-top: 6px solid #585858;
+  border-right: 6px solid #585858;
+  width: 20px;
+  height: 68px;
+}
+.chart .background .base {
+  position: absolute;
+  left: 14px;
+  width: 456px;
+  border-top: 6px solid #585858;
+}
+.chart .foreground {
+  height: 272px;
+}
+.chart .foreground li {
+  display: inline-block;
+}
+.yellow .bar {
+  background-color: #EECD3A;
+}
+.green .bar {
+  background-color: #67B054;
+}
 .ratio {
   margin-top: 18px;
   text-align: center;

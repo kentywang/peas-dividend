@@ -12,7 +12,7 @@
   <body id="app">
     <header role="banner">
       <div class="heading">
-        <div class="author">Logo</div>
+        <div class="author">Wang</div>
         <h1>Mendelian Inheritance</h1>
       </div>
       <nav aria-label="Misc" class="nav">
@@ -135,16 +135,32 @@
       <section class="chart-section">
         <output form="punnett-form" for="pea-1-genotype pea-2-genotype">
           <div class="output-caption">Phenotypic ratio</div>
-          <ul class="chart">
-            <li>
-              <div v-bind:style="{height}"/>
-              <div>Yellow</div>
-            </li>
-            <li>
-              <div v-bind:style="{height}"/>
-              <div>Green</div>
-            </li>
-          </ul>
+          <div class="chart">
+            <div class="background">
+              <div class="tick">
+                <span class="value">4</span>
+              </div>
+              <div class="tick">
+                <span class="value">3</span>
+              </div>
+              <div class="tick">
+                <span class="value">2</span>
+              </div>
+              <div class="tick">
+                <span class="value">1</span>
+              </div>
+              <div class="base"></div>
+            </div>
+            <ul class="foreground">
+              <li class="yellow">
+                <div class="bar" v-bind:style="{height}"></div>
+                <div class="color-label">Yellow</div>
+              </li>
+              <li class="green">
+                <div class="bar" v-bind:style="{height}"></div>
+                <div class="color-label">Green</div>
+              </li>
+            </ul>
         </output>
 
         <output form="punnett-form" for="pea-1-genotype pea-2-genotype">

@@ -1,5 +1,5 @@
 .chart-section {
-  background-color: $gray-light;
+  background-color: $color-gray-light;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -29,16 +29,74 @@
 }
 
 .chart {
-  margin-top: 12px;
+  margin: 37px;
   width: 500px;
   height: 350px;
+
+  .background {
+    position: absolute;
+
+    .value {
+      position: absolute;
+      font-size: 39px;
+      font-family: 'Roboto', sans-serif;
+      color: $color-charcoal;
+      font-weight: 500;
+      left: -26px;
+      top: -26px;
+    }
+
+    .tick {
+      position: relative;
+      border-top: 6px solid $color-charcoal;
+      border-right: 6px solid $color-charcoal;
+      width: 20px;
+      height: 68px;
+    }
+
+    .base {
+      position: absolute;
+      left: 14px;
+      width: 456px;
+      border-top: 6px solid $color-charcoal;
+    }
+  }
+
+  .foreground {
+    height: 272px;
+
+    li {
+      display: inline-block;
+
+      .bar {
+      }
+    }
+  }
+}
+
+.yellow {
+  .bar {
+    background-color: $color-yellow;
+  }
+
+  .color-label {
+  }
+}
+
+.green {
+  .bar {
+    background-color: $color-green;
+  }
+
+  .color-label {
+  }
 }
 
 .ratio {
   margin-top: 18px; 
   text-align: center;
   font-family: 'Roboto', sans-serif;
-  color: $charcoal;
+  color: $color-charcoal;
   font-weight: 700;
   font-size: 50px;
 }
