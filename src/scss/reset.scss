@@ -1,6 +1,6 @@
 html {
   box-sizing: border-box;
-  font-size: 16px;
+  font-size: $root-font-size;
 }
 
 *,
@@ -21,9 +21,9 @@ ol,
 ul,
 fieldset,
 input {
+  font-weight: normal;
   margin: 0;
   padding: 0;
-  font-weight: normal;
 }
 
 ol,
@@ -36,6 +36,6 @@ fieldset {
 }
 
 img {
-  max-width: 100%;
   height: auto;
+  max-width: 100%;
 }

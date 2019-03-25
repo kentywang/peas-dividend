@@ -1,0 +1,37 @@
+// Colors
+$color-red: #E07567;
+$color-red-faded: rgb(224, 117, 103, 0.5);
+$color-yellow: #EECD3A;
+$color-green: #67B054;
+$color-charcoal: #585858;
+$color-gray: #C6C6C6;
+$color-gray-light: #D3D3D3;
+$color-white-faded: rgb(255, 255, 255, 0.75);
+$color-white-faded-more: rgb(255, 255, 255, 0.5);
+
+// z-indices
+$z-index-one: 100;
+
+// Fonts
+@mixin roboto {
+  font-family: 'Roboto', sans-serif;
+}
+
+// Breakpoints
+@mixin larger {
+  @media (min-width: 1280px) { @content; }
+}
+
+// Root font size
+$root-font-size: 16px;
+
+// px to rem
+@function getRem($font-size) {
+  $rem-size: $font-size / $root-font-size;
+  @return #{$rem-size}rem;
+}
+
+@mixin fontSize($font-size) {
+  font-size: $font-size;
+  font-size: getRem($font-size);
+}

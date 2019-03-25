@@ -1,8 +1,9 @@
 header {
+  @include roboto;
+
   align-items: center;
   color: white;
   display: flex;
-  font-family: 'Roboto', sans-serif;
   justify-content: space-between;
   padding: 28px 36px 0 57px;
 
@@ -14,59 +15,61 @@ header {
 }
 
 .heading {
-  display: flex;
   align-items: center;
-}
+  display: flex;
 
-.author {
-  display: inline-block;
-  font-size: 47px;
-  padding-right: 18px;
-  border-right: 2px solid white;
-  letter-spacing: 0.05em;
-  font-weight: 500;
-}
+  .author {
+    @include fontSize(47px);
 
-h1 {
-  display: inline-block;
-  font-size: 33px;
-  font-weight: 300;
-  margin: 0 18px;
-  letter-spacing: 0.05em;
+    border-right: 2px solid white;
+    display: inline-block;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    padding-right: 18px;
+  }
+
+  h1 {
+    @include fontSize(33px);
+
+    display: inline-block;
+    font-weight: 300;
+    letter-spacing: 0.05em;
+    margin: 0 18px;
+  }
 }
 
 .nav {
   margin-left: auto;
-}
 
-.menu {
-  display: flex;
-}
+  .menu {
+    display: flex;
 
-.menu li {
-  display: inline-block;
+     li {
+      display: inline-block;
+    }
+  }
 }
 
 .info,
 .close {
-  display: block;
-  border: 2px solid white;
   border-radius: 50%;
+  border: 2px solid white;
+  display: block;
   height: 56px;
-  width: 56px;
-  position: relative;
   margin-left: 18px;
-}
+  position: relative;
+  width: 56px;
 
-.info::before,
-.close::before {
-  font-family: 'Roboto', sans-serif;
-  font-size: 30px;
-  text-align: center;
-  top: 50%;
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%,-50%);
+  &::before {
+    @include fontSize(30px);
+    @include roboto;
+
+    left: 50%;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    transform: translate(-50%,-50%);
+  }
 }
 
 .info::before {

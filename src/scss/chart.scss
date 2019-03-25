@@ -1,13 +1,12 @@
 .chart-section {
+  align-items: center;
   background-color: $color-gray-light;
   display: flex;
-  align-items: center;
-  justify-content: center;
   flex-direction: column;
+  justify-content: center;
   width: 100%;
 
   @include larger {
-    // width: 38%;
     flex: 1 0 40%;
   }
 
@@ -17,12 +16,13 @@
 }
 
 .output-caption {
-  font-size: 35px;
-  font-family: 'Roboto', sans-serif;
+  @include fontSize(35px);
+  @include roboto;
+
   color: white;
-  text-transform: uppercase;
   font-weight: 700;
   letter-spacing: 0.05em;
+  text-transform: uppercase;
 
   &.geno {
     margin-top: 126px;
@@ -30,76 +30,99 @@
 }
 
 .chart {
-  margin: 37px 37px 0 ;
-  width: 500px;
   height: 350px;
+  margin: 37px 37px 0 ;
   position: relative;
+  width: 500px;
 
   .background {
+    left: 25px;
     position: absolute;
-    left: 26px;
 
-    .value {
-      position: absolute;
-      font-size: 39px;
-      font-family: 'Roboto', sans-serif;
-      color: $color-charcoal;
-      font-weight: 500;
-      left: -26px;
-      top: -26px;
-    }
-
-    .tick {
-      position: relative;
-      border-top: 6px solid $color-charcoal;
+    .y-axis-tick {
       border-right: 6px solid $color-charcoal;
-      width: 20px;
+      border-top: 6px solid $color-charcoal;
       height: 68px;
+      position: relative;
+      width: 20px;
+
+      .value {
+        @include fontSize(39px);
+        @include roboto;
+
+        color: $color-charcoal;
+        font-weight: 500;
+        left: -26px;
+        position: absolute;
+        top: -26px;
+      }
     }
 
-    .base {
-      position: absolute;
-      left: 14px;
-      width: 456px;
+    .y-axis-base {
       border-top: 6px solid $color-charcoal;
+      left: 14px;
+      position: absolute;
+      width: 456px;
     }
   }
 
   .foreground {
-    height: 272px;
+    display: flex;
+    flex-direction: column;
+    height: 329px;
+    left: 120px;
+    position: absolute;
 
-    li {
-      display: inline-block;
+    .bars {
+      align-items: flex-end;
+      display: flex;
+      flex: 1;
 
-      .bar {
+      div {
+        align-items: flex-end;
+        border-left: 6px solid white;
+        border-radius: 6px 6px 0 0;
+        border-right: 6px solid white;
+        border-top: 6px solid white;
+        flex: 1;
+        margin: 0 24px;
+        transition: height 0.2s ease-in-out;
+        width: 120px;
+
+        &.yellow {
+          background-color: $color-yellow;
+
+        }
+
+        &.green {
+          background-color: $color-green;
+        }
+      }
+    }
+
+    .color-labels {
+      display: flex;
+      margin-top: 10px;
+
+      div {
+        @include fontSize(40px);
+        @include roboto;
+
+        color: $color-charcoal;
+        flex: 1;
+        font-weight: 500;
+        margin: 0 24px;
       }
     }
   }
 }
 
-.yellow {
-  .bar {
-    background-color: $color-yellow;
-  }
-
-  .color-label {
-  }
-}
-
-.green {
-  .bar {
-    background-color: $color-green;
-  }
-
-  .color-label {
-  }
-}
-
 .ratio {
-  margin-top: 18px; 
-  text-align: center;
-  font-family: 'Roboto', sans-serif;
+  @include fontSize(50px);
+  @include roboto;
+
   color: $color-charcoal;
   font-weight: 700;
-  font-size: 50px;
+  margin-top: 18px;
+  text-align: center;
 }
