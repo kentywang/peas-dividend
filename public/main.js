@@ -7,7 +7,7 @@ const app = new Vue({
   methods: {
     setAlleles: function (event) {
 
-      const id = event.path[2].id;
+      const id = event.composedPath()[2].id;
       const value = event.target.value;
 
       if (id === 'pea-1-genotype') {
